@@ -1,0 +1,35 @@
+{
+  "name": "redux-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.13",
+    "redux": "^3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "redux-basics.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedfouad01099/incremen-decrement-add-and-subtract-counter-using-react-redux-.git"
+  },
+  "keywords": [
+    "redux",
+    "app"
+  ],
+  "author": "Ahmed Fouad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmedfouad01099/incremen-decrement-add-and-subtract-counter-using-react-redux-/issues"
+  },
+  "homepage": "https://github.com/ahmedfouad01099/incremen-decrement-add-and-subtract-counter-using-react-redux-#readme"
+}
