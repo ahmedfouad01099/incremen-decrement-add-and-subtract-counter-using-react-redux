@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import * as actionsCreators from "../../store/actions/index";
 import CounterControl from "../../components/CounterControl/CounterControl";
 import CounterOutput from "../../components/CounterOutput/CounterOutput";
-import * as actionTypes from "../../store/actions";
+// import * as actionTypes from "../../store/actions/actions";
 
 class Counter extends Component {
   state = {
@@ -83,15 +83,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onIncrementCounter: () => dispatch({ type: actionTypes.INCREMENT }),
-    onDecrementCounter: () => dispatch({ type: actionTypes.DECREMENT }),
-    onAddCounter: () => dispatch({ type: actionTypes.ADD, val: 5 }),
+    onIncrementCounter: () => dispatch(actionsCreators.increment()),
+    onDecrementCounter: () => dispatch(actionsCreators.decrement()),
+    onAddCounter: () => dispatch(actionsCreators.add(5)),
     // here we easily could use val and get it from user input dynamiclly for example
-    onSubtractCounter: () => dispatch({ type: actionTypes.SUBTRACT, val: 5 }),
-    onStoreResult: (result) =>
-      dispatch({ type: actionTypes.STORE_RESULT, result: result }),
-    onDeleteResult: (id) =>
-      dispatch({ type: actionTypes.DELETE_RESULT, resultElementId: id }),
+    onSubtractCounter: () => dispatch(actionsCreators.subtract(5)),
+    onStoreResult: (result) => dispatch(actionsCreators.storeResult(result)),
+    onDeleteResult: (id) => dispatch(actionsCreators.deleteResult(id)),
   };
 };
 
